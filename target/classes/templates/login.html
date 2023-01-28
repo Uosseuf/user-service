@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/fontawesome-free-6.2.1-web/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        p {
+            font-family: Roboto, Arial, Helvetica, sans-serif;
+        }
+
+        html {
+            background: rgb(193,255,242);
+            background: linear-gradient(90deg, rgba(193,255,242,1) 0%, rgba(178,237,197,1) 100%);
+            position: absolute;
+            bottom: 0px; top: 0px; right: 0px; left: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 550px;
+            height: 700px;
+            border-radius: 25px;
+            background-color: white;
+            box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.27);
+        }
+
+        .login-form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .login-input {
+            position: relative;
+            width: 350px;
+            height: 35px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .input-text {
+            position: absolute;
+            left: 8px;
+            top: 0px;
+            pointer-events: none;
+            transition: all 0.5s;
+            background-color: #fff;
+        }
+        .login-input input:focus {
+            outline: none;
+        }
+
+        .login-input input {
+            margin: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            border: #59C9A5 solid 0.5px;
+            border-radius: 15px;
+            padding: 5px;
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            outline: none;
+        }
+
+        .login-input input:valid ~ p,
+        .login-input input:focus ~ p {
+            color: #00e9ba;
+            transform: translateX(7px) translateY(-18px);
+            padding: 0 10px;
+            font-size: 0.65em;
+
+
+        }
+
+        .login-button {
+            background-color: #00e9ba;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            margin-top: 25px;
+            width: 350px;
+            height: 50px;
+            border-radius: 25px;
+            transition: all 0.5s;
+            border: none;
+        }
+
+        .login-button:hover {
+            opacity: 50%;
+        }
+        .login-text {
+            font-weight: bold;
+            color: white;
+            font-size: 20px;
+        }
+        .form-title {
+            font-weight: bold;
+            position: absolute;
+            font-size: 35px;
+            top: 150px;
+        }
+        .remember-me-container {
+            margin-top: 5px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .remember-me-container label {
+            margin-left: 5px;
+            font-family: Roboto, Arial, Helvetica, sans-serif;
+        }
+
+        input[type="checkbox"] {
+            appearance: none;
+            height: 17px;
+            width: 17px;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all 0.5s;
+            background-color: #d5d5d5;
+        }
+
+        input[type="checkbox"]:after {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f00c";
+            font-size: 15px;
+            display: none;
+            color: white;
+        }
+        input[type="checkbox"]:hover {
+            background-color: #a5a5a5;
+        }
+        input[type="checkbox"]:checked {
+            background-color: #00e9ba;
+        }
+        input[type="checkbox"]:checked::after {
+            display: block;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+<div class="login-box">
+    <form method="post" class="login-form">
+        <p class="form-title">Login</p>
+        <div class="login-input">
+            <input id="username" name="username" required type="text">
+            <p class="input-text">Username</p>
+        </div>
+        <div class="login-input">
+            <input id="password" required name="password" type="password">
+            <p class="input-text">Password</p>
+        </div>
+        <button class="login-button" type="submit">
+            <p class="login-text">Login</p>
+        </button>
+        <div class="remember-me-container">
+            <input type="checkbox">
+            <label id="remember-me" >Remember me</label>
+        </div>
+    </form>
+</div>
+</body>
+</html>

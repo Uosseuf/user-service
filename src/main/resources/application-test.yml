@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:h2:tcp://localhost:9093/~/backend
+    username: yosseuf
+    password: Zxcvb123er
+    driver-class-name: org.h2.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        format_sql: true
